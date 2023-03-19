@@ -4,6 +4,7 @@ const express=require('express');
 const cors=require('cors');
 const bodyParser=require('body-parser');
 const ejs=require('ejs');
+const PORT=process.env.PORT || 3000;
 
 const app=express();
 app.set("view engine", "ejs");
@@ -43,7 +44,7 @@ app.post("/ask-gpt", (req, res)=>{
 
 })
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
 console.log("Listening on this port")
 })
 
